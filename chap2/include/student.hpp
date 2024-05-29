@@ -15,7 +15,10 @@ class Student: public Person{
 
         void changeMajor(const string& newMajor);
 
-        ~Student(){};
+        virtual ~Student()
+        {
+            cout << "Destructor (Student)"<<endl;
+        };
 
     protected:
 

@@ -1,5 +1,6 @@
 #include "person.hpp"
 #include "student.hpp"
+#include <boost/make_shared.hpp>
 
 int main()
 {
@@ -28,6 +29,14 @@ int main()
     cout << "*****************************" << endl;
     cout << "Name: " << person_ptr[1]->getName()<<endl;
     person_ptr[1]->print();
+    cout << "*****************************" << endl;
+
+    // Boost shaared pointer (smart pointer)
+    boost::shared_ptr<Person> p_boost_ptr;
+    p_boost_ptr = boost::shared_ptr<Student>(new Student());
+    cout<< "Using boost shared pointer"<<endl;
+    cout<< "inherit student from person"<<endl;
+    p_boost_ptr->print();
     cout << "*****************************" << endl;
 
     return EXIT_SUCCESS;
