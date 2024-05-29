@@ -5,7 +5,11 @@ include_directories(
     include
 )
 
-add_executable(test_class_example1
+add_executable(test_person_student
 src/test_person_student.cpp
 include/person.cpp
 include/student.cpp)
+
+add_executable(test_progression
+src/test_progression.cpp
+)

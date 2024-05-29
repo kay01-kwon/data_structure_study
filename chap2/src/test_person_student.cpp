@@ -33,10 +33,16 @@ int main()
 
     // Boost shaared pointer (smart pointer)
     boost::shared_ptr<Person> p_boost_ptr;
-    p_boost_ptr = boost::shared_ptr<Student>(new Student());
+    p_boost_ptr = boost::make_shared<Student>();
+    auto boost_cast_ptr = boost::static_pointer_cast< Student >(p_boost_ptr);
     cout<< "Using boost shared pointer"<<endl;
     cout<< "inherit student from person"<<endl;
-    p_boost_ptr->print();
+    cout<< "Before changing major"<<endl;
+    boost_cast_ptr->print();
+    cout<< "After changing major"<<endl;
+    boost_cast_ptr->changeMajor("Mechanical Engineering");
+    boost_cast_ptr->print();
+
     cout << "*****************************" << endl;
 
     return EXIT_SUCCESS;
