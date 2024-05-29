@@ -33,8 +33,8 @@ template <typename T>
 inline Progression<T>::Progression(T f)
 :first(f), curr(f)
 {
-    cout<<"Progression class"<<endl;
-    cout<<curr<<endl;
+    // cout<<"Progression class"<<endl;
+    // cout<<curr<<endl;
 }
 
 template <typename T>

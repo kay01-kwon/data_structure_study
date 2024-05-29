@@ -27,14 +27,14 @@ template <typename T>
 inline ArithProgression<T>::ArithProgression(T i)
 :Progression<T>(),inc(i)
 {
-    cout << "Arith Progression class" << endl;
-    cout << this->curr <<endl;
+    // cout << "Arith Progression class" << endl;
+    // cout << this->curr <<endl;
 }
 
 template <typename T>
 inline void ArithProgression<T>::print()
 {
-    cout << this->curr <<endl;
+    // cout << this->curr <<endl;
 }
 
 template <typename T>
